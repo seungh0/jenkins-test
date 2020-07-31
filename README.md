@@ -6,6 +6,9 @@ docker volume create jenkins-test-volume
 docker volume ls
 
 docker run -d -it --name jenkins-test -p 8080:8080 -p 8000:8000 -v jenkins-test-volume jenkins/jenkins:lts
+docker exec -it jenkins-test bash
+ 
+// jenkins 8080포트에 떳으니 setup
 
 java -version // openjdk version "1.8.0_242"
 ```
